@@ -11,10 +11,10 @@
         android:theme="@style/Theme.Reto2_Pokedex">
         <activity
             android:name=".ui.PokemonView"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ui.CatchPokemon"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
