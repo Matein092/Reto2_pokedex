@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "58313997412",
+    "project_id": "pokedes-reto2",
+    "storage_bucket": "pokedes-reto2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58313997412:android:b0ac7d44e8023ac8eb3371",
+        "android_client_info": {
+          "package_name": "co.icesi.reto2_pokedex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58313997412-6tuatjvm8dlmm3k5ko92qnofku3a9bo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdDv4-uRtROXlU1Y7dOZH6S1SNTaOyyug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58313997412-6tuatjvm8dlmm3k5ko92qnofku3a9bo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58313997412:android:864b3d7389c56a63eb3371",
+        "android_client_info": {
+          "package_name": "co.icesi.pokedes_reto2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58313997412-6tuatjvm8dlmm3k5ko92qnofku3a9bo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdDv4-uRtROXlU1Y7dOZH6S1SNTaOyyug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58313997412-6tuatjvm8dlmm3k5ko92qnofku3a9bo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

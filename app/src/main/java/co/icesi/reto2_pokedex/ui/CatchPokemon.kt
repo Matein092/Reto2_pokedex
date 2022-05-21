@@ -8,8 +8,8 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import co.icesi.reto2_pokedex.R
 import co.icesi.reto2_pokedex.databinding.ActivityCatchPokemonBinding
+import co.icesi.reto2_pokedex.databinding.ActivityMainBinding
 import co.icesi.reto2_pokedex.model.Pokemon
 import co.icesi.reto2_pokedex.util.Constants
 import co.icesi.reto2_pokedex.util.HTTPSWebUtilDomi
@@ -25,6 +25,7 @@ import kotlinx.coroutines.withContext
 class CatchPokemon : AppCompatActivity() {
 
     private lateinit var binding : ActivityCatchPokemonBinding
+    private lateinit var bindingMain : ActivityMainBinding
     private lateinit var trainerName : String
     private val adapter = PokemonAdapter()
 
@@ -32,13 +33,14 @@ class CatchPokemon : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCatchPokemonBinding.inflate(layoutInflater)
+        bindingMain = ActivityMainBinding.inflate(layoutInflater)
 
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
         setContentView(binding.root)
-        trainerName = intent.extras?.getString("trainerName")!!
+        trainerName =bindingMain.trainerName.toString()
         val pokemonList = binding.pokemonList
         pokemonList.setHasFixedSize(true)
         pokemonList.layoutManager = LinearLayoutManager(this)
@@ -165,7 +167,7 @@ class CatchPokemon : AppCompatActivity() {
     fun addPokemonsToList(){
         adapter.clearPokemon()
         Firebase.firestore.collection("pokemon").
-        whereEqualTo("trainername", trainerName).
+        whereEqualTo("trainerName", trainerName).
         orderBy("timeAdded", Query.Direction.ASCENDING).
         get().addOnCompleteListener { task ->
             for (document in task.result!!) {
